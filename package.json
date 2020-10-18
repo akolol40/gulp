@@ -1,0 +1,37 @@
+{
+  "name": "gulp_akolol40",
+  "version": "1.0.0",
+  "description": "MihailKharadjidi_gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akolol40/gulp.git"
+  },
+  "author": "MihailKharadjidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akolol40/gulp/issues"
+  },
+  "homepage": "https://github.com/akolol40/gulp#readme",
+  "dependencies": {
+    "browser-sync": "^2.26.13",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngquant": "^9.0.1",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "webpack": "^5.1.3",
+    "webpack-cli": "^4.0.0"
+  }
+}
