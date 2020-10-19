@@ -85,10 +85,18 @@ function js() {
 }
 
 function watchFiles() {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.sass], sassCompiler);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.img], images);
+    watch([path.watch.html], function(event, cb) {
+        gulp.series(html());
+    });
+    watch([path.watch.style], function(event, cb) {
+        gulp.series(sassCompiler());
+    });
+    watch([path.watch.js], function(event, cb) {
+        gulp.series(js());
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.series(images);
+    });
 }
 
 function images() {
@@ -104,7 +112,7 @@ function images() {
 }
 
 let build = gulp.series(clean, gulp.parallel(html, sassCompiler, js, images));
-let watch_ = gulp.parallel(build, Server);
+let watch_ = gulp.parallel(watchFiles, build, Server);
 
 
 exports.images = images;
